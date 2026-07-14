@@ -92,7 +92,7 @@
     const loginSpinner = document.getElementById('login-spinner')
 
     const { data: { session } } = await supabase.auth.getSession()
-    if (session) { window.location.href = '/pages/dashboard'; }
+    if (session) { window.location.href = 'dashboard.html'; }
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault()
@@ -115,7 +115,7 @@
         return
       }
 
-      window.location.href = '/pages/dashboard'
+      window.location.href = 'dashboard.html'
     })
 
     document.getElementById('toggle-pass').addEventListener('click', () => {

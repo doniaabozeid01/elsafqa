@@ -102,12 +102,12 @@
 
     // Auth check
     const { data: { session } } = await supabase.auth.getSession()
-    if (!session) { window.location.href = '/pages/login'; }
+    if (!session) { window.location.href = 'login.html'; }
     else { document.getElementById('user-email').textContent = session.user.email; }
 
     window.supabase = supabase
     window.currentSection = 'overview'
-    window.logout = async () => { await supabase.auth.signOut(); window.location.href = '/pages/login'; }
+    window.logout = async () => { await supabase.auth.signOut(); window.location.href = 'login.html'; }
     window.toggleSidebar = () => { document.getElementById('sidebar').classList.toggle('-translate-x-full'); }
 
     // Navigation
