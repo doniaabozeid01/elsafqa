@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شركة الاتحاد التجارية للاستيراد والتصدير</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#e8e0d6]">
+    <div class="w-full px-6 lg:px-10">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex flex-col items-start">
+          <span class="font-arabic text-2xl font-bold text-[#8B5E3C] tracking-wide" data-i18n="nav-logo">الاتحاد التجارية</span>
+          <span class="text-sm text-[#6B6560] tracking-wide mt-1 font-semibold">Quality Beyond Borders. Excellence Without Limits.</span>
+        </a>
+        <div class="hidden md:flex items-center gap-10">
+          <a href="index.html" class="nav-link active text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-home">الرئيسية</a>
+          <a href="pages/about.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-about">من نحن</a>
+          <a href="pages/products.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-products">منتجاتنا</a>
+          <a href="#brand" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-brand">اصنع علامتك التجارية</a>
+          <a href="pages/gallery.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-gallery">المعرض</a>
+          <a href="pages/contact.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-contact">اتصل بنا</a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="pages/login" class="nav-signin-btn"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg><span data-i18n="nav-signin">تسجيل الدخول</span></a>
+             <button class="lang-toggle-btn lang-toggle-pill" aria-label="Toggle Language">
+            <span class="lang-toggle-text">EN</span>
+          </button>
+        </div>
+        <div class="flex md:hidden items-center gap-2">
+          <button class="lang-toggle-btn lang-toggle-pill" aria-label="Toggle Language">
+            <span class="lang-toggle-text">EN</span>
+          </button>
+          <button id="menu-btn" class="text-[#2D2A26] p-2" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-[#e8e0d6] bg-white">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="index.html" class="text-[#8B5E3C] font-medium py-2" data-i18n="nav-home">الرئيسية</a>
+        <a href="pages/about" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-about">من نحن</a>
+        <a href="pages/products" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-products">منتجاتنا</a>
+        <a href="#brand" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-brand">اصنع علامتك التجارية</a>
+        <a href="pages/gallery" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-gallery">المعرض</a>
+        <a href="pages/contact" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-contact">اتصل بنا</a>
+        <a href="pages/login" class="nav-signin-btn justify-center text-center mt-2"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg><span data-i18n="nav-signin">تسجيل الدخول</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="images/hero-bg.png" alt="شركة الاتحاد التجارية" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-l from-black/70 via-black/50 to-black/60"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 pt-32 pb-20 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-8 animate-fade-in-up">
+          <span class="w-2 h-2 rounded-full bg-[#C4956A]"></span>
+          <span data-i18n="hero-badge">شركة الاتحاد التجارية</span>
+        </div>
+
+        <h1 class="font-arabic text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8 animate-fade-in-up animate-fade-in-up-delay-1" style="font-size: 1.5rem;" data-i18n="hero-title">
+          أهلًا وسهلًا بكم في <span class="text-[#C4956A]">شركة الاتحاد التجارية</span><br>للاستيراد والتصدير
+        </h1>
+
+        <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto mb-10 animate-fade-in-up animate-fade-in-up-delay-2" data-i18n="hero-desc">
+          إحدى الشركات الرائدة في تصدير المواد الغذائية ومنتجات التجميل إلى أسواق الشرق الأوسط وما حولها إقليمياً وعالمياً
+        </p>
+
+        <div class="flex flex-wrap gap-4 justify-center animate-fade-in-up animate-fade-in-up-delay-3">
+          <a href="pages/about" class="inline-flex items-center gap-2 px-8 py-3 rounded-full font-medium text-base transition-all duration-300 bg-[#C4956A] text-white hover:bg-[#B8865A] hover:shadow-xl hover:-translate-y-0.5" data-i18n="hero-cta1">اعرف المزيد</a>
+          <a href="pages/contact" class="inline-flex items-center gap-2 px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border-2 border-white/40 text-white hover:bg-white/10 hover:-translate-y-0.5" data-i18n="hero-cta2">تواصل معنا</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="home-about-label">من نحن</span>
+          <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6 leading-tight" data-i18n="home-about-title">
+            شركة الاتحاد التجارية<br>للاستيراد والتصدير
+          </h2>
+          <p class="text-[#6B6560] leading-relaxed mb-4" data-i18n="home-about-p1">
+            إحدى الشركات الرائدة في تصدير المواد الغذائية ومنتجات التجميل إلى أسواق الشرق الأوسط وما حولها إقليمياً وعالمياً، حيث نلتزم بتوفير منتجات عالية الجودة وخدمات احترافية تلبي تطلعات عملائنا في مختلف الأسواق.
+          </p>
+          <p class="text-[#8B5E3C] font-semibold font-arabic leading-relaxed text-lg" data-i18n="home-about-p2">
+            شركة الاتحاد التجارية للاستيراد والتصدير… جودة تثق بها، وشراكة تمتد إلى العالم.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-3xl overflow-hidden border border-[#e8e0d6]">
+            <img src="../images/goal.jpg" alt="شركة الاتحاد التجارية" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -top-4 -right-4 w-32 h-32 bg-[#8B5E3C]/5 rounded-full blur-3xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="products-section-label">منتجاتنا</span>
+        <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6" data-i18n="products-section-title">منتجات الاتحاد التجارية</h2>
+        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+      </div>
+      <div id="home-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="col-span-full text-center py-12">
+          <div class="spinner mx-auto mb-4" style="border:3px solid #f3f3f3;border-top:3px solid #8B5E3C;border-radius:50%;width:40px;height:40px;animation:spin 0.8s linear infinite;display:inline-block"></div>
+          <p class="text-[#6B6560] text-sm" data-i18n="products-empty">قريبًا.. المنتجات قادمة</p>
+        </div>
+      </div>
+      <div id="products-view-all-wrap" class="hidden text-center mt-14">
+        <a href="pages/products" class="inline-flex items-center gap-2 px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border-2 border-[#8B5E3C] text-[#8B5E3C] hover:bg-[#8B5E3C] hover:text-white hover:shadow-xl hover:-translate-y-0.5">
+          <span data-i18n="products-view-all">عرض كل المنتجات</span>
+          <svg class="w-5 h-5 rtl-flip" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Build Your Brand Section -->
+  <section id="brand" class="py-28 bg-[#FAF6F1]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="brand-label">خدمات التصنيع للغير</span>
+        <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6 leading-tight" data-i18n="brand-title">
+          اصنع علامتك التجارية<br>معنا
+        </h2>
+        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h3 class="font-arabic text-xl text-[#2D2A26] font-bold mb-4" data-i18n="brand-subtitle">
+            حوّل فكرتك إلى علامة تجارية ناجحة
+          </h3>
+          <p class="text-[#6B6560] leading-relaxed mb-6" data-i18n="brand-p1">
+            تمكين الشركات ورواد الأعمال من إنشاء علاماتهم التجارية الخاصة عبر تقديم خدمات التصنيع للغير بجودة متميزة، وأسعار تنافسية، وحلول متكاملة تبدأ من الفكرة وحتى وصول المنتج النهائي إلى السوق.
+          </p>
+          <p class="text-[#8B5E3C] font-semibold font-arabic leading-relaxed text-lg" data-i18n="brand-p2">
+            نقدم حلولًا متكاملة في التصنيع للغير، والاستيراد والتصدير، لنمنح علامتك التجارية بداية قوية ومستقبلًا واعدًا.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="aspect-[16/9] rounded-3xl overflow-hidden border border-[#e8e0d6]">
+            <img src="images/brand-factory.png" alt="اصنع علامتك التجارية معنا" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -top-4 -left-4 w-32 h-32 bg-[#8B5E3C]/5 rounded-full blur-3xl"></div>
+        </div>
+      </div>
+
+      <div class="stagger-grid grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+            <div data-anim="1" class="stagger-card card-hover p-6 rounded-2xl bg-white border border-[#e8e0d6] group">
+              <div class="w-14 h-14 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center mb-4 group-hover:bg-[#8B5E3C] transition-all duration-300">
+                <svg class="w-7 h-7 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+              </div>
+              <h4 class="font-arabic text-lg font-bold text-[#2D2A26] mb-2" data-i18n="brand-card1-title">تطوير المنتج</h4>
+              <ul class="text-[#6B6560] text-sm space-y-1">
+                <li data-i18n="brand-card1-1">دراسة الفكرة</li>
+                <li data-i18n="brand-card1-2">اختيار التركيبة المناسبة</li>
+                <li data-i18n="brand-card1-3">تطوير المنتج بما يتوافق مع احتياجات السوق</li>
+              </ul>
+            </div>
+
+            <div data-anim="2" class="stagger-card card-hover p-6 rounded-2xl bg-white border border-[#e8e0d6] group">
+              <div class="w-14 h-14 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center mb-4 group-hover:bg-[#8B5E3C] transition-all duration-300">
+                <svg class="w-7 h-7 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/></svg>
+              </div>
+              <h4 class="font-arabic text-lg font-bold text-[#2D2A26] mb-2" data-i18n="brand-card2-title">تصميم الهوية والتغليف</h4>
+              <ul class="text-[#6B6560] text-sm space-y-1">
+                <li data-i18n="brand-card2-1">تصميم العبوات</li>
+                <li data-i18n="brand-card2-2">تصميم اللوجو والهوية</li>
+                <li data-i18n="brand-card2-3">تجهيز ملفات الطباعة</li>
+              </ul>
+            </div>
+
+            <div data-anim="3" class="stagger-card card-hover p-6 rounded-2xl bg-white border border-[#e8e0d6] group">
+              <div class="w-14 h-14 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center mb-4 group-hover:bg-[#8B5E3C] transition-all duration-300">
+                <svg class="w-7 h-7 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+              </div>
+              <h4 class="font-arabic text-lg font-bold text-[#2D2A26] mb-2" data-i18n="brand-card3-title">التصنيع والجودة</h4>
+              <ul class="text-[#6B6560] text-sm space-y-1">
+                <li data-i18n="brand-card3-1">تصنيع وفق أعلى معايير الجودة</li>
+                <li data-i18n="brand-card3-2">فحص المنتج</li>
+                <li data-i18n="brand-card3-3">تعبئة وتغليف احترافي</li>
+              </ul>
+            </div>
+
+            <div data-anim="4" class="stagger-card card-hover p-6 rounded-2xl bg-white border border-[#e8e0d6] group">
+              <div class="w-14 h-14 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center mb-4 group-hover:bg-[#8B5E3C] transition-all duration-300">
+                <svg class="w-7 h-7 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+              </div>
+              <h4 class="font-arabic text-lg font-bold text-[#2D2A26] mb-2" data-i18n="brand-card4-title">التسليم والدعم</h4>
+              <ul class="text-[#6B6560] text-sm space-y-1">
+                <li data-i18n="brand-card4-1">تجهيز المنتج النهائي</li>
+                <li data-i18n="brand-card4-2">خدمات الشحن</li>
+                <li data-i18n="brand-card4-3">دعم مستمر لتطوير العلامة التجارية</li>
+              </ul>
+            </div>
+      </div>
+
+      <div class="text-center">
+        <a href="pages/contact" class="inline-flex items-center gap-2 px-10 py-3.5 rounded-full font-medium text-base transition-all duration-300 bg-[#8B5E3C] text-white hover:bg-[#6B4423] hover:shadow-xl hover:-translate-y-0.5" data-i18n="brand-cta1">
+          ابدأ علامتك التجارية الآن
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline - Customer Journey -->
+  <section class="py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="timeline-label">رحلة العميل</span>
+        <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6" data-i18n="timeline-title">رحلة علامتك التجارية</h2>
+        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+      </div>
+
+      <div id="journey" class="relative max-w-4xl mx-auto">
+        <svg id="journey-svg" class="absolute inset-0 w-full h-full pointer-events-none hidden md:block" fill="none">
+          <defs>
+            <linearGradient id="journeyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#C4956A"/>
+              <stop offset="0.5" stop-color="#8B5E3C"/>
+              <stop offset="1" stop-color="#6B4423"/>
+            </linearGradient>
+          </defs>
+          <path id="journey-path-bg" stroke="#eadfd2" stroke-width="2" stroke-dasharray="6 8" stroke-linecap="round"/>
+          <path id="journey-path" stroke="url(#journeyGrad)" stroke-width="3.5" stroke-linecap="round"/>
+          <g id="journey-dots"></g>
+          <circle id="journey-tip" r="6" fill="#8B5E3C" opacity="0"/>
+        </svg>
+
+        <div class="journey-item">
+          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
+              </div>
+              <div>
+                <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-1-title">الفكرة</h3>
+                <p class="text-[#6B6560] text-sm" data-i18n="timeline-1-desc">بداية الرحلة بتحديد الفكرة والرؤية</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-item">
+          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-2-title">دراسة المشروع</h3>
+                <p class="text-[#6B6560] text-sm" data-i18n="timeline-2-desc">تحليل السوق وتقييم الجدوى</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-item">
+          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+              </div>
+              <div>
+                <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-3-title">تطوير المنتج</h3>
+                <p class="text-[#6B6560] text-sm" data-i18n="timeline-3-desc">اختيار التركيبة وتطوير المنتج</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-item">
+          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+              </div>
+              <div>
+                <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-4-title">التصنيع</h3>
+                <p class="text-[#6B6560] text-sm" data-i18n="timeline-4-desc">تصنيع وفق أعلى معايير الجودة</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-item">
+          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+              </div>
+              <div>
+                <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-5-title">التغليف</h3>
+                <p class="text-[#6B6560] text-sm" data-i18n="timeline-5-desc">تعبئة وتغليف احترافي للمنتج</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-item">
+          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+              </div>
+              <div>
+                <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-6-title">التسليم</h3>
+                <p class="text-[#6B6560] text-sm" data-i18n="timeline-6-desc">شحن المنتج النهائي للعملاء</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-item">
+          <div class="bg-gradient-to-l from-[#8B5E3C] to-[#6B4423] border border-[#8B5E3C] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.841m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-arabic text-lg font-bold text-white" data-i18n="timeline-7-title">إطلاق العلامة التجارية</h3>
+                <p class="text-white/80 text-sm" data-i18n="timeline-7-desc">إطلاق المنتج في السوق والبدء في التسويق</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Values -->
+  <section class="py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="features-label">قيمنا</span>
+        <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6" data-i18n="features-title">لماذا تختار الاتحاد؟</h2>
+        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+      </div>
+
+      <div id="features-grid" class="stagger-grid grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div data-anim="1" class="stagger-card card-hover p-8 rounded-2xl bg-[#FAF6F1] border border-[#e8e0d6] text-center group">
+          <div class="w-16 h-16 rounded-2xl bg-[#8B5E3C]/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#8B5E3C] transition-all duration-300">
+            <svg class="w-8 h-8 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-arabic text-xl font-bold text-[#2D2A26] mb-3" data-i18n="feature1-title">جودة عالية</h3>
+          <p class="text-[#6B6560] leading-relaxed text-sm" data-i18n="feature1-desc">نلتزم بتوفير منتجات عالية الجودة تلبي أعلى المعايير العالمية في الغذاء والتجميل</p>
+        </div>
+
+        <div data-anim="2" class="stagger-card card-hover p-8 rounded-2xl bg-[#FAF6F1] border border-[#e8e0d6] text-center group">
+          <div class="w-16 h-16 rounded-2xl bg-[#8B5E3C]/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#8B5E3C] transition-all duration-300">
+            <svg class="w-8 h-8 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+          </div>
+          <h3 class="font-arabic text-xl font-bold text-[#2D2A26] mb-3" data-i18n="feature2-title">ثقة وموثوقية</h3>
+          <p class="text-[#6B6560] leading-relaxed text-sm" data-i18n="feature2-desc">شراكة تجارية موثوقة تمتد إلى أسواق متعددة حول العالم</p>
+        </div>
+
+        <div data-anim="3" class="stagger-card card-hover p-8 rounded-2xl bg-[#FAF6F1] border border-[#e8e0d6] text-center group">
+          <div class="w-16 h-16 rounded-2xl bg-[#8B5E3C]/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#8B5E3C] transition-all duration-300">
+            <svg class="w-8 h-8 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+          </div>
+          <h3 class="font-arabic text-xl font-bold text-[#2D2A26] mb-3" data-i18n="feature3-title">وصول عالمي</h3>
+          <p class="text-[#6B6560] leading-relaxed text-sm" data-i18n="feature3-desc">شبكة واسعة من العملاء والموزعين في الشرق الأوسط والعالم</p>
+        </div>
+
+        <div data-anim="4" class="stagger-card card-hover p-8 rounded-2xl bg-[#FAF6F1] border border-[#e8e0d6] text-center group">
+          <div class="w-16 h-16 rounded-2xl bg-[#8B5E3C]/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-[#8B5E3C] transition-all duration-300">
+            <svg class="w-8 h-8 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+          </div>
+          <h3 class="font-arabic text-xl font-bold text-[#2D2A26] mb-3" data-i18n="feature4-title">دعم متواصل</h3>
+          <p class="text-[#6B6560] leading-relaxed text-sm" data-i18n="feature4-desc">فريق متخصص لدعمكم على مدار الساعة لضمان رضاكم التام</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Goal Section -->
+  <section class="py-28 bg-[#FAF6F1]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="goal-label">هدفنا</span>
+          <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-8 leading-tight" data-i18n="goal-title">
+            جودة تثق بها،<br>وشراكة تمتد إلى العالم
+          </h2>
+          <p class="text-[#6B6560] leading-relaxed mb-8 text-lg" data-i18n="goal-desc">
+            نسعى إلى توفير منتجات غذائية ومنتجات تجميل موثوقة وعالية الجودة للأسواق المحلية والإقليمية والدولية، مع الالتزام بأعلى معايير الجودة والكفاءة في التوريد والتصدير، بما يضمن رضا العملاء وتعزيز الثقة المتبادلة مع شركائنا حول العالم.
+          </p>
+          <div class="flex flex-wrap gap-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#8B5E3C]/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              </div>
+              <span class="text-sm font-medium text-[#2D2A26]" data-i18n="goal-check1">منتجات عالية الجودة</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#8B5E3C]/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              </div>
+              <span class="text-sm font-medium text-[#2D2A26]" data-i18n="goal-check2">شبكة توزيع عالمية</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[#8B5E3C]/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+              </div>
+              <span class="text-sm font-medium text-[#2D2A26]" data-i18n="goal-check3">أسعار تنافسية</span>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-3xl border border-[#8B5E3C]/10 overflow-hidden">
+            <img src="../images/goal.jpg" alt="شركة الاتحاد التجارية" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-[#e8e0d6] max-w-[200px]">
+            <div class="text-3xl font-bold text-[#8B5E3C] font-arabic" data-i18n="goal-stat">+10</div>
+            <div class="text-sm text-[#6B6560] mt-1" data-i18n="goal-stat-desc">سنوات من الخبرة</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section class="py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="vision-label">رؤيتنا</span>
+        <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6" data-i18n="vision-title">طموحنا نحو القمة</h2>
+        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+      </div>
+
+      <div class="stagger-grid grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div data-anim="1" class="stagger-card vision-card group relative overflow-hidden p-7 rounded-2xl border border-[#e8e0d6] bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#8B5E3C]/30">
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center group-hover:bg-[#8B5E3C] transition-all duration-300">
+              <svg class="w-6 h-6 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+            </div>
+            <span class="vision-num">01</span>
+          </div>
+          <p class="text-[#55504A] text-[15px] leading-relaxed" data-i18n="vision-1">التوسع في أسواق الشرق الأوسط والأسواق الدولية الواعدة</p>
+          <span class="vision-bar"></span>
+        </div>
+
+        <div data-anim="2" class="stagger-card vision-card group relative overflow-hidden p-7 rounded-2xl border border-[#e8e0d6] bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#8B5E3C]/30">
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center group-hover:bg-[#8B5E3C] transition-all duration-300">
+              <svg class="w-6 h-6 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            </div>
+            <span class="vision-num">02</span>
+          </div>
+          <p class="text-[#55504A] text-[15px] leading-relaxed" data-i18n="vision-2">تعزيز مكانة الشركة كجهة موثوقة في تصدير المواد الغذائية ومنتجات التجميل</p>
+          <span class="vision-bar"></span>
+        </div>
+
+        <div data-anim="3" class="stagger-card vision-card group relative overflow-hidden p-7 rounded-2xl border border-[#e8e0d6] bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#8B5E3C]/30">
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center group-hover:bg-[#8B5E3C] transition-all duration-300">
+              <svg class="w-6 h-6 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+            </div>
+            <span class="vision-num">03</span>
+          </div>
+          <p class="text-[#55504A] text-[15px] leading-relaxed" data-i18n="vision-3">بناء علاقات وشراكات تجارية طويلة الأمد مع العملاء والموزعين</p>
+          <span class="vision-bar"></span>
+        </div>
+
+        <div data-anim="4" class="stagger-card vision-card group relative overflow-hidden p-7 rounded-2xl border border-[#e8e0d6] bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#8B5E3C]/30">
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center group-hover:bg-[#8B5E3C] transition-all duration-300">
+              <svg class="w-6 h-6 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <span class="vision-num">04</span>
+          </div>
+          <p class="text-[#55504A] text-[15px] leading-relaxed" data-i18n="vision-4">الالتزام بأعلى معايير الجودة والسلامة في جميع المنتجات المصدرة</p>
+          <span class="vision-bar"></span>
+        </div>
+
+        <div data-anim="5" class="stagger-card vision-card group relative overflow-hidden p-7 rounded-2xl border border-[#e8e0d6] bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#8B5E3C]/30">
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center group-hover:bg-[#8B5E3C] transition-all duration-300">
+              <svg class="w-6 h-6 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"/></svg>
+            </div>
+            <span class="vision-num">05</span>
+          </div>
+          <p class="text-[#55504A] text-[15px] leading-relaxed" data-i18n="vision-5">تقديم أسعار تنافسية وخدمات احترافية تلبي احتياجات العملاء</p>
+          <span class="vision-bar"></span>
+        </div>
+
+        <div data-anim="6" class="stagger-card vision-card group relative overflow-hidden p-7 rounded-2xl border border-[#e8e0d6] bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-[#8B5E3C]/30">
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center group-hover:bg-[#8B5E3C] transition-all duration-300">
+              <svg class="w-6 h-6 text-[#8B5E3C] group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
+            </div>
+            <span class="vision-num">06</span>
+          </div>
+          <p class="text-[#55504A] text-[15px] leading-relaxed" data-i18n="vision-6">تحقيق نمو مستدام وزيادة حجم الصادرات عامًا بعد عام</p>
+          <span class="vision-bar"></span>
+        </div>
+
+        <div data-anim="7" class="stagger-card vision-card group relative overflow-hidden rounded-2xl md:col-span-2 lg:col-span-3 bg-gradient-to-l from-[#8B5E3C] to-[#6B4423] p-10 text-center transition-all duration-300 hover:shadow-2xl">
+          <div class="absolute inset-0 bg-texture opacity-10"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mx-auto mb-5">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
+            </div>
+            <p class="text-white/95 text-lg leading-relaxed max-w-2xl mx-auto" data-i18n="vision-7">مواكبة متطلبات الأسواق العالمية وتطوير المنتجات بما يتناسب مع احتياجات المستهلكين</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-28 bg-gradient-to-br from-[#8B5E3C] to-[#6B4423] text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-texture opacity-10"></div>
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h2 class="font-arabic text-3xl md:text-4xl mb-6 leading-tight" data-i18n="cta-title">شراكة تمتد إلى العالم</h2>
+      <p class="text-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed" data-i18n="cta-desc">
+        شركة الاتحاد التجارية للاستيراد والتصدير… جودة تثق بها، وشراكة تمتد إلى العالم
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="pages/contact" class="inline-flex items-center gap-2 px-8 py-3 rounded-full font-medium text-base transition-all duration-300 bg-white text-[#8B5E3C] hover:bg-white/90 hover:shadow-xl hover:-translate-y-0.5" data-i18n="nav-cta">تواصل معنا</a>
+        <a href="pages/about" class="inline-flex items-center gap-2 px-8 py-3 rounded-full font-medium text-base transition-all duration-300 border-2 border-white/30 text-white hover:bg-white/10" data-i18n="hero-cta1">اعرف المزيد</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#2D2A26] text-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="lg:col-span-2">
+          <h4 class="font-arabic text-2xl font-bold mb-6" data-i18n="nav-logo">الاتحاد التجارية</h4>
+          <p class="text-white/60 leading-relaxed max-w-md" data-i18n="footer-desc">
+            شركة الاتحاد التجارية للاستيراد والتصدير - وجهتك الموثوقة للمنتجات الغذائية ومنتجات التجميل عالية الجودة
+          </p>
+        </div>
+        <div>
+          <h5 class="font-arabic text-lg font-bold mb-6" data-i18n="footer-links-title">روابط سريعة</h5>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="footer-link text-white/60 hover:text-[#C4956A] text-sm" data-i18n="nav-home">الرئيسية</a></li>
+            <li><a href="pages/about" class="footer-link text-white/60 hover:text-[#C4956A] text-sm" data-i18n="nav-about">من نحن</a></li>
+            <li><a href="pages/contact" class="footer-link text-white/60 hover:text-[#C4956A] text-sm" data-i18n="nav-contact">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-arabic text-lg font-bold mb-6" data-i18n="footer-contact-title">اتصل بنا</h5>
+          <ul class="space-y-3 text-white/60 text-sm">
+            <li dir="ltr">info@al-ittihad.com</li>
+            <li dir="ltr">00201050302172</li>
+            <li dir="ltr">00201210077500</li>
+            <li dir="ltr">00201050005152</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm" data-i18n="footer-copyright">جميع الحقوق محفوظة © 2026 شركة الاتحاد التجارية</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/lang.js"></script>
+  <script>
+    var SB_URL = 'https://jupriobuhxpqwuotmzlc.supabase.co';
+    var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp1cHJpb2J1aHhwcXd1b3RtemxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM4NTU2MTksImV4cCI6MjA5OTQzMTYxOX0.Yxcibr5oNO9CPGGdBXQYnaomnsgKfh-EMGQo3qOZGN0';
+
+    async function loadProducts() {
+      try {
+        var res = await fetch(SB_URL + '/rest/v1/products?is_active=eq.true&order=sort_order&select=*', {
+          headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY }
+        });
+        var products = await res.json();
+        var grid = document.getElementById('home-products-grid');
+        if (!grid) return;
+        if (!Array.isArray(products) || products.length === 0) {
+          grid.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-[#6B6560] text-lg">قريبًا.. المنتجات قادمة</p></div>';
+          return;
+        }
+        var viewAllWrap = document.getElementById('products-view-all-wrap');
+        if (viewAllWrap) viewAllWrap.classList.remove('hidden');
+        grid.innerHTML = '';
+        products.slice(0, 3).forEach(function(p) {
+          grid.innerHTML += '<div class="bg-white rounded-2xl border border-[#e8e0d6] overflow-hidden hover:shadow-xl transition-all duration-300 group">' +
+            '<div class="h-56 bg-gray-100 overflow-hidden">' +
+            (p.image_url ? '<img src="' + p.image_url + '" alt="' + p.name_ar + '" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">' : '<div class="w-full h-full flex items-center justify-center"><svg class="w-16 h-16 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v13.5A1.5 1.5 0 003.75 21z"/></svg></div>') +
+            '</div>' +
+            '<div class="p-6">' +
+            '<h3 class="font-arabic text-lg font-bold text-[#2D2A26] mb-1">' + (p.name_ar || '') + '</h3>' +
+            (p.name_en ? '<p class="text-sm text-[#6B6560] mb-3">' + p.name_en + '</p>' : '') +
+            (p.desc_ar ? '<p class="text-sm text-[#6B6560] leading-relaxed" style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">' + p.desc_ar + '</p>' : '') +
+            '</div></div>';
+        });
+      } catch(e) {
+        console.error('Products load error:', e);
+      }
+    }
+    loadProducts();
+
+    var menuBtn = document.getElementById('menu-btn');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn) menuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    var observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
+        }
+      });
+    }, observerOptions);
+    document.querySelectorAll('.card-hover:not(.stagger-card)').forEach(function(el) {
+      el.classList.add('section-hidden');
+      observer.observe(el);
+    });
+    document.querySelectorAll('section:not(#products) .grid:not(.stagger-grid)').forEach(function(el) {
+      el.classList.add('section-hidden');
+      observer.observe(el);
+    });
+
+    // Staggered grids: cards enter in one coordinated wave, one after another
+    document.querySelectorAll('.stagger-grid').forEach(function(grid) {
+      var cards = grid.querySelectorAll('.stagger-card');
+      cards.forEach(function(card) {
+        card.addEventListener('animationend', function() {
+          card.classList.add('anim-done');
+        });
+      });
+      var gridObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            cards.forEach(function(card) { card.classList.add('anim-in'); });
+            gridObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.2 });
+      gridObserver.observe(grid);
+    });
+
+    // Customer journey: zigzag line drawn on scroll, cards revealed one by one
+    (function() {
+      var journey = document.getElementById('journey');
+      if (!journey) return;
+      var svg = document.getElementById('journey-svg');
+      var pathEl = document.getElementById('journey-path');
+      var pathBg = document.getElementById('journey-path-bg');
+      var items = Array.prototype.slice.call(journey.querySelectorAll('.journey-item'));
+      var totalLen = 0, anchors = [], isDesktop = false;
+
+      function buildPath() {
+        isDesktop = window.matchMedia('(min-width: 768px)').matches;
+        if (!isDesktop) { update(); return; }
+        var w = journey.offsetWidth, h = journey.offsetHeight;
+        svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+        // offsetLeft/offsetTop ignore the reveal transform, so the path stays accurate
+        var pts = items.map(function(it) {
+          return {
+            x: it.offsetLeft + it.offsetWidth / 2,
+            top: it.offsetTop,
+            bottom: it.offsetTop + it.offsetHeight
+          };
+        });
+        var d = 'M ' + pts[0].x + ' ' + pts[0].bottom;
+        anchors = [0];
+        var tmp = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        for (var i = 1; i < pts.length; i++) {
+          var prev = pts[i - 1], cur = pts[i];
+          var midY = (prev.bottom + cur.top) / 2;
+          d += ' C ' + prev.x + ' ' + midY + ', ' + cur.x + ' ' + midY + ', ' + cur.x + ' ' + cur.top;
+          tmp.setAttribute('d', d);
+          anchors.push(tmp.getTotalLength());
+        }
+        pathEl.setAttribute('d', d);
+        pathBg.setAttribute('d', d);
+        totalLen = pathEl.getTotalLength();
+        pathEl.style.strokeDasharray = totalLen;
+        pathEl.style.strokeDashoffset = totalLen;
+        update();
+      }
+
+      function update() {
+        var rect = journey.getBoundingClientRect();
+        var vh = window.innerHeight;
+        var progress = (vh * 0.8 - rect.top) / rect.height;
+        progress = Math.max(0, Math.min(1, progress));
+        if (isDesktop && totalLen) {
+          var drawn = totalLen * progress;
+          pathEl.style.strokeDashoffset = totalLen - drawn;
+          if (progress > 0) {
+            items.forEach(function(item, i) {
+              if (drawn >= anchors[i]) item.classList.add('revealed');
+            });
+          }
+        } else {
+          items.forEach(function(item) {
+            if (item.getBoundingClientRect().top < vh * 0.88) item.classList.add('revealed');
+          });
+        }
+      }
+
+      var ticking = false;
+      window.addEventListener('scroll', function() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function() { update(); ticking = false; });
+      }, { passive: true });
+      window.addEventListener('resize', buildPath);
+      window.addEventListener('load', buildPath);
+      buildPath();
+    })();
+  </script>
+</body>
+</html>

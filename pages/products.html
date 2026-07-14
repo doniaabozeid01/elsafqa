@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منتجاتنا - شركة الاتحاد التجارية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#e8e0d6]">
+    <div class="w-full px-6 lg:px-10">
+      <div class="flex items-center justify-between h-20">
+        <a href="../index.html" class="flex flex-col items-start">
+          <span class="font-arabic text-2xl font-bold text-[#8B5E3C] tracking-wide" data-i18n="nav-logo">الاتحاد التجارية</span>
+          <span class="text-sm text-[#6B6560] tracking-wide mt-1 font-semibold">Quality Beyond Borders. Excellence Without Limits.</span>
+        </a>
+        <div class="hidden md:flex items-center gap-10">
+          <a href="../index.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-home">الرئيسية</a>
+          <a href="about.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-about">من نحن</a>
+          <a href="products.html" class="nav-link active text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-products">منتجاتنا</a>
+          <a href="../index.html#brand" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-brand">اصنع علامتك التجارية</a>
+          <a href="gallery.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-gallery">المعرض</a>
+          <a href="contact.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-contact">اتصل بنا</a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="login.html" class="nav-signin-btn"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg><span data-i18n="nav-signin">تسجيل الدخول</span></a>
+          <button class="lang-toggle-btn lang-toggle-pill" aria-label="Toggle Language">
+            <span class="lang-toggle-text">EN</span>
+          </button>
+        </div>
+        <div class="flex md:hidden items-center gap-2">
+          <button class="lang-toggle-btn lang-toggle-pill" aria-label="Toggle Language">
+            <span class="lang-toggle-text">EN</span>
+          </button>
+          <button id="menu-btn" class="text-[#2D2A26] p-2" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-[#e8e0d6] bg-white">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="../index.html" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-home">الرئيسية</a>
+        <a href="about.html" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-about">من نحن</a>
+        <a href="products.html" class="text-[#8B5E3C] font-medium py-2" data-i18n="nav-products">منتجاتنا</a>
+        <a href="../index.html#brand" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-brand">اصنع علامتك التجارية</a>
+        <a href="gallery.html" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-gallery">المعرض</a>
+        <a href="contact.html" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-contact">اتصل بنا</a>
+        <a href="login.html" class="nav-signin-btn justify-center text-center mt-2"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg><span data-i18n="nav-signin">تسجيل الدخول</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="pt-36 pb-16 bg-gradient-to-br from-[#FAF6F1] via-[#FDF8F3] to-[#F5EDE4] relative overflow-hidden">
+    <div class="absolute inset-0 bg-texture"></div>
+    <div class="absolute top-10 left-10 w-72 h-72 rounded-full bg-[#8B5E3C]/5 blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="products-section-label">منتجاتنا</span>
+      <h1 class="font-arabic text-4xl md:text-5xl text-[#2D2A26] mt-4 mb-4" data-i18n="products-section-title">منتجات الاتحاد التجارية</h1>
+      <p class="text-[#6B6560] text-lg max-w-2xl mx-auto" data-i18n="products-page-desc">تعرف على تشكيلة منتجاتنا عالية الجودة</p>
+      <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto mt-6"></div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="py-16 bg-white">
+    <div class="w-[92%] lg:w-[80%] mx-auto">
+      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="text-center py-20 col-span-full">
+          <div style="border:3px solid #f3f3f3;border-top:3px solid #8B5E3C;border-radius:50%;width:40px;height:40px;animation:spin 0.8s linear infinite;display:inline-block;margin-bottom:1rem"></div>
+          <p class="text-[#6B6560] text-sm" data-i18n="products-loading">جاري تحميل المنتجات...</p>
+        </div>
+      </div>
+      <div id="products-empty" class="hidden text-center py-20">
+        <svg class="w-20 h-20 text-gray-200 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+        <p class="text-[#6B6560] text-lg" data-i18n="products-empty">قريبًا.. المنتجات قادمة</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-[#8B5E3C] to-[#6B4423] text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-texture opacity-10"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h2 class="font-arabic text-3xl md:text-4xl mb-6 leading-tight" data-i18n="cta-title">شراكة تمتد إلى العالم</h2>
+      <p class="text-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed" data-i18n="cta-desc">
+        شركة الاتحاد التجارية للاستيراد والتصدير… جودة تثق بها، وشراكة تمتد إلى العالم
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-3 rounded-full font-medium text-base transition-all duration-300 bg-white text-[#8B5E3C] hover:bg-white/90 hover:shadow-xl hover:-translate-y-0.5" data-i18n="nav-cta">تواصل معنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#2D2A26] text-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="lg:col-span-2">
+          <h4 class="font-arabic text-2xl font-bold mb-6" data-i18n="nav-logo">الاتحاد التجارية</h4>
+          <p class="text-white/60 leading-relaxed max-w-md" data-i18n="footer-desc">
+            شركة الاتحاد التجارية للاستيراد والتصدير - وجهتك الموثوقة للمنتجات الغذائية ومنتجات التجميل عالية الجودة
+          </p>
+        </div>
+        <div>
+          <h5 class="font-arabic text-lg font-bold mb-6" data-i18n="footer-links-title">روابط سريعة</h5>
+          <ul class="space-y-3">
+            <li><a href="../index.html" class="footer-link text-white/60 hover:text-[#C4956A] text-sm" data-i18n="nav-home">الرئيسية</a></li>
+            <li><a href="about.html" class="footer-link text-white/60 hover:text-[#C4956A] text-sm" data-i18n="nav-about">من نحن</a></li>
+            <li><a href="contact.html" class="footer-link text-white/60 hover:text-[#C4956A] text-sm" data-i18n="nav-contact">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-arabic text-lg font-bold mb-6" data-i18n="footer-contact-title">اتصل بنا</h5>
+          <ul class="space-y-3 text-white/60 text-sm">
+            <li dir="ltr">info@al-ittihad.com</li>
+            <li dir="ltr">00201050302172</li>
+            <li dir="ltr">00201210077500</li>
+            <li dir="ltr">00201050005152</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-16 pt-8 text-center">
+        <p class="text-white/40 text-sm" data-i18n="footer-copyright">جميع الحقوق محفوظة © 2026 شركة الاتحاد التجارية</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/translations.js"></script>
+  <script src="../js/lang.js"></script>
+  <script>
+    var SB_URL = 'https://jupriobuhxpqwuotmzlc.supabase.co';
+    var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp1cHJpb2J1aHhwcXd1b3RtemxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM4NTU2MTksImV4cCI6MjA5OTQzMTYxOX0.Yxcibr5oNO9CPGGdBXQYnaomnsgKfh-EMGQo3qOZGN0';
+
+    var menuBtn = document.getElementById('menu-btn');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn) menuBtn.addEventListener('click', function() { mobileMenu.classList.toggle('hidden'); });
+
+    async function loadProducts() {
+      var grid = document.getElementById('products-grid');
+      var empty = document.getElementById('products-empty');
+      try {
+        var res = await fetch(SB_URL + '/rest/v1/products?is_active=eq.true&order=sort_order&select=*', {
+          headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY }
+        });
+        var products = await res.json();
+
+        if (!Array.isArray(products) || products.length === 0) {
+          grid.classList.add('hidden');
+          empty.classList.remove('hidden');
+          return;
+        }
+
+        grid.innerHTML = '';
+        products.forEach(function(p) {
+          grid.innerHTML += '<div class="bg-white rounded-2xl border border-[#e8e0d6] overflow-hidden hover:shadow-xl transition-all duration-300 group">' +
+            '<div class="h-56 bg-gray-100 overflow-hidden">' +
+            (p.image_url ? '<img src="' + p.image_url + '" alt="' + (p.name_ar || '') + '" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">' : '<div class="w-full h-full flex items-center justify-center"><svg class="w-16 h-16 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v13.5A1.5 1.5 0 003.75 21z"/></svg></div>') +
+            '</div>' +
+            '<div class="p-6">' +
+            '<h3 class="font-arabic text-lg font-bold text-[#2D2A26] mb-1">' + (p.name_ar || '') + '</h3>' +
+            (p.name_en ? '<p class="text-sm text-[#6B6560] mb-3">' + p.name_en + '</p>' : '') +
+            (p.desc_ar ? '<p class="text-sm text-[#6B6560] leading-relaxed">' + p.desc_ar + '</p>' : '') +
+            '</div></div>';
+        });
+      } catch(e) {
+        console.error('Products load error:', e);
+        grid.classList.add('hidden');
+        empty.classList.remove('hidden');
+      }
+    }
+    loadProducts();
+  </script>
+</body>
+</html>

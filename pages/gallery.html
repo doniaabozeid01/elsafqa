@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المعرض - شركة الاتحاد التجارية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    .gallery-item { break-inside: avoid; }
+    .lightbox { background: rgba(0,0,0,0.9); backdrop-filter: blur(10px); }
+    .lightbox img { max-height: 85vh; max-width: 90vw; object-fit: contain; }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    .lightbox-animate { animation: fadeIn 0.3s ease-out; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#e8e0d6]">
+    <div class="w-full px-6 lg:px-10">
+      <div class="flex items-center justify-between h-20">
+        <a href="../index.html" class="flex flex-col items-start">
+          <span class="font-arabic text-2xl font-bold text-[#8B5E3C] tracking-wide" data-i18n="nav-logo">الاتحاد التجارية</span>
+          <span class="text-sm text-[#6B6560] tracking-wide mt-1 font-semibold">Quality Beyond Borders. Excellence Without Limits.</span>
+        </a>
+        <div class="hidden md:flex items-center gap-10">
+          <a href="../index.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-home">الرئيسية</a>
+          <a href="about.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-about">من نحن</a>
+          <a href="products.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-products">منتجاتنا</a>
+          <a href="../index.html#brand" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-brand">اصنع علامتك التجارية</a>
+          <a href="gallery.html" class="nav-link active text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-gallery">المعرض</a>
+          <a href="contact.html" class="nav-link text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-contact">اتصل بنا</a>
+        </div>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="login.html" class="nav-signin-btn"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg><span data-i18n="nav-signin">تسجيل الدخول</span></a>
+          <button class="lang-toggle-btn lang-toggle-pill" aria-label="Toggle Language">
+            <span class="lang-toggle-text">EN</span>
+          </button>
+        </div>
+        <div class="flex md:hidden items-center gap-2">
+          <button class="lang-toggle-btn lang-toggle-pill" aria-label="Toggle Language">
+            <span class="lang-toggle-text">EN</span>
+          </button>
+          <button id="menu-btn" class="text-[#2D2A26] p-2" aria-label="القائمة">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden border-t border-[#e8e0d6] bg-white">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <a href="../index.html" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-home">الرئيسية</a>
+        <a href="about.html" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-about">من نحن</a>
+        <a href="products.html" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-products">منتجاتنا</a>
+        <a href="../index.html#brand" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-brand">اصنع علامتك التجارية</a>
+        <a href="gallery.html" class="text-[#8B5E3C] font-medium py-2" data-i18n="nav-gallery">المعرض</a>
+        <a href="contact.html" class="text-[#2D2A26] hover:text-[#8B5E3C] font-medium py-2" data-i18n="nav-contact">اتصل بنا</a>
+        <a href="login.html" class="nav-signin-btn justify-center text-center mt-2"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg><span data-i18n="nav-signin">تسجيل الدخول</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="pt-36 pb-16 bg-gradient-to-br from-[#FAF6F1] via-[#FDF8F3] to-[#F5EDE4] relative overflow-hidden">
+    <div class="absolute inset-0 bg-texture"></div>
+    <div class="absolute top-10 left-10 w-72 h-72 rounded-full bg-[#8B5E3C]/5 blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase">المعرض</span>
+      <h1 class="font-arabic text-4xl md:text-5xl text-[#2D2A26] mt-4 mb-4">معرض الصور</h1>
+      <p class="text-[#6B6560] text-lg max-w-2xl mx-auto">شاهد أحدث صور منتجاتنا ومشاريعنا</p>
+      <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto mt-6"></div>
+    </div>
+  </section>
+
+  <!-- Filter Tabs -->
+  <section class="py-8 bg-white border-b border-[#e8e0d6] sticky top-20 z-40">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-wrap gap-3 justify-center">
+        <button onclick="filterGallery('all')" class="gallery-filter active px-5 py-2 rounded-full text-sm font-medium bg-[#8B5E3C] text-white transition-all duration-300" data-filter="all">الكل</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="text-center py-20 col-span-full">
+          <div style="border:3px solid #f3f3f3;border-top:3px solid #8B5E3C;border-radius:50%;width:40px;height:40px;animation:spin 0.8s linear infinite;display:inline-block;margin-bottom:1rem"></div>
+          <p class="text-[#6B6560] text-sm">جاري تحميل الصور...</p>
+        </div>
+      </div>
+      <div id="gallery-empty" class="hidden text-center py-20">
+        <svg class="w-20 h-20 text-gray-200 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v13.5A1.5 1.5 0 003.75 21z"/></svg>
+        <p class="text-[#6B6560] text-lg">لا توجد صور في المعرض بعد</p>
+        <p class="text-gray-400 text-sm mt-2">قريبًا.. صور جديدة قادمة</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#2D2A26] text-white py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="lg:col-span-2">
+          <h4 class="font-arabic text-2xl font-bold mb-6" data-i18n="nav-logo">الاتحاد التجارية</h4>
+          <p class="text-white/60 leading-relaxed max-w-md" data-i18n="footer-desc">
+            شركة الاتحاد التجارية للاستيراد والتصدير - وجهتك الموثوقة للمنتجات الغذائية ومنتجات التجميل عالية الجودة
+          </p>
+        </div>
+        <div>
+          <h5 class="font-arabic text-lg font-bold mb-6" data-i18n="footer-links-title">روابط سريعة</h5>
+          <ul class="space-y-3">
+            <li><a href="../index.html" class="footer-link text-white/60 hover:text-[#C4956A] text-sm" data-i18n="nav-home">الرئيسية</a></li>
+            <li><a href="about.html" class="footer-link text-white/60 hover:text-[#C4956A] text-sm" data-i18n="nav-about">من نحن</a></li>
+            <li><a href="contact.html" class="footer-link text-white/60 hover:text-[#C4956A] text-sm" data-i18n="nav-contact">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-arabic text-lg font-bold mb-6" data-i18n="footer-contact-title">اتصل بنا</h5>
+          <ul class="space-y-3 text-white/60 text-sm">
+            <li dir="ltr">info@al-ittihad.com</li>
+            <li dir="ltr">00201050302172</li>
+            <li dir="ltr">00201210077500</li>
+            <li dir="ltr">00201050005152</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-16 pt-8 text-center">
+        <p class="text-white/40 text-sm" data-i18n="footer-copyright">جميع الحقوق محفوظة © 2026 شركة الاتحاد التجارية</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-50 hidden lightbox items-center justify-center" onclick="closeLightbox()">
+    <button onclick="closeLightbox()" class="absolute top-6 left-6 text-white/80 hover:text-white z-10">
+      <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <button onclick="event.stopPropagation();prevImage()" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/80 hover:text-white z-10 bg-white/10 rounded-full p-3">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
+    </button>
+    <button onclick="event.stopPropagation();nextImage()" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/80 hover:text-white z-10 bg-white/10 rounded-full p-3">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg>
+    </button>
+    <div class="lightbox-animate text-center" onclick="event.stopPropagation()">
+      <img id="lightbox-img" src="" alt="" class="rounded-lg shadow-2xl">
+      <div class="mt-4">
+        <h3 id="lightbox-title" class="text-white text-lg font-bold"></h3>
+        <p id="lightbox-desc" class="text-white/60 text-sm mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/translations.js"></script>
+  <script src="../js/lang.js"></script>
+  <script>
+    var SB_URL = 'https://jupriobuhxpqwuotmzlc.supabase.co';
+    var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp1cHJpb2J1aHhwcXd1b3RtemxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM4NTU2MTksImV4cCI6MjA5OTQzMTYxOX0.Yxcibr5oNO9CPGGdBXQYnaomnsgKfh-EMGQo3qOZGN0';
+    var allImages = [];
+    var currentIdx = 0;
+
+    function showError(msg) {
+      var g = document.getElementById('gallery-grid');
+      var e = document.getElementById('gallery-empty');
+      if (g) g.classList.add('hidden');
+      if (e) {
+        e.classList.remove('hidden');
+        e.innerHTML = '<svg class="w-12 h-12 text-red-300 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg><p class="text-red-500 text-sm">' + msg + '</p>';
+      }
+    }
+
+    var menuBtn = document.getElementById('menu-btn');
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn) menuBtn.addEventListener('click', function() { mobileMenu.classList.toggle('hidden'); });
+
+    async function loadGallery() {
+      var grid = document.getElementById('gallery-grid');
+      var empty = document.getElementById('gallery-empty');
+
+      try {
+        var res = await fetch(SB_URL + '/rest/v1/gallery_images?is_active=eq.true&order=sort_order&select=*', {
+          headers: { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY }
+        });
+        var data = await res.json();
+
+        if (!Array.isArray(data) || data.length === 0) {
+          grid.classList.add('hidden');
+          empty.classList.remove('hidden');
+          return;
+        }
+
+        allImages = data.filter(function(p) { return p.image_url; });
+
+        if (allImages.length === 0) {
+          grid.classList.add('hidden');
+          empty.classList.remove('hidden');
+          return;
+        }
+
+        var categories = ['all'];
+        allImages.forEach(function(p) {
+          if (p.category && categories.indexOf(p.category) === -1) categories.push(p.category);
+        });
+
+        var filterContainer = document.querySelector('.flex.flex-wrap.gap-3');
+        categories.forEach(function(cat) {
+          var label = cat === 'all' ? 'الكل' : cat;
+          var btn = document.createElement('button');
+          btn.setAttribute('onclick', "filterGallery('" + cat + "')");
+          btn.setAttribute('data-filter', cat);
+          btn.className = 'gallery-filter px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-[#6B6560] hover:bg-gray-200 transition-all duration-300';
+          if (cat === 'all') btn.className = 'gallery-filter active px-5 py-2 rounded-full text-sm font-medium bg-[#8B5E3C] text-white transition-all duration-300';
+          btn.textContent = label;
+          filterContainer.appendChild(btn);
+        });
+
+        renderGallery(allImages);
+      } catch(err) {
+        showError('خطأ في تحميل الصور: ' + err.message);
+      }
+    }
+
+    function renderGallery(images) {
+      var grid = document.getElementById('gallery-grid');
+      var empty = document.getElementById('gallery-empty');
+
+      if (images.length === 0) {
+        grid.classList.add('hidden');
+        empty.classList.remove('hidden');
+        return;
+      }
+
+      grid.classList.remove('hidden');
+      empty.classList.add('hidden');
+      grid.innerHTML = '';
+
+      images.forEach(function(p) {
+        var card = document.createElement('div');
+        card.className = 'rounded-2xl overflow-hidden border border-[#e8e0d6] hover:shadow-xl transition-all duration-300 cursor-pointer group bg-white';
+        card.onclick = function() { openLightbox(p); };
+        card.innerHTML =
+          '<div class="h-64 overflow-hidden">' +
+            '<img src="' + p.image_url + '" alt="' + (p.title_ar || '') + '" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">' +
+          '</div>' +
+          '<div class="p-4">' +
+            '<h3 class="text-[#2D2A26] font-bold text-sm">' + (p.title_ar || '') + '</h3>' +
+            (p.title_en ? '<p class="text-[#6B6560] text-xs mt-1">' + p.title_en + '</p>' : '') +
+            (p.description_ar ? '<p class="text-[#6B6560] text-xs mt-2 line-clamp-2">' + p.description_ar + '</p>' : '') +
+          '</div>';
+        grid.appendChild(card);
+      });
+    }
+
+    window.filterGallery = function(cat) {
+      document.querySelectorAll('.gallery-filter').forEach(function(btn) {
+        if (btn.getAttribute('data-filter') === cat) {
+          btn.className = 'gallery-filter active px-5 py-2 rounded-full text-sm font-medium bg-[#8B5E3C] text-white transition-all duration-300';
+        } else {
+          btn.className = 'gallery-filter px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-[#6B6560] hover:bg-gray-200 transition-all duration-300';
+        }
+      });
+      var filtered = cat === 'all' ? allImages : allImages.filter(function(p) { return p.category === cat; });
+      renderGallery(filtered);
+    };
+
+    window.openLightbox = function(product) {
+      currentIdx = allImages.findIndex(function(p) { return p.id === product.id; });
+      document.getElementById('lightbox-img').src = product.image_url;
+      document.getElementById('lightbox-title').textContent = (product.title_ar || '') + (product.title_en ? ' - ' + product.title_en : '');
+      document.getElementById('lightbox-desc').textContent = product.description_ar || '';
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.getElementById('lightbox').classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.closeLightbox = function() {
+      document.getElementById('lightbox').classList.add('hidden');
+      document.getElementById('lightbox').classList.remove('flex');
+      document.body.style.overflow = '';
+    };
+
+    window.prevImage = function() {
+      currentIdx = (currentIdx - 1 + allImages.length) % allImages.length;
+      var p = allImages[currentIdx];
+      document.getElementById('lightbox-img').src = p.image_url;
+      document.getElementById('lightbox-title').textContent = (p.title_ar || '') + (p.title_en ? ' - ' + p.title_en : '');
+      document.getElementById('lightbox-desc').textContent = p.description_ar || '';
+    };
+
+    window.nextImage = function() {
+      currentIdx = (currentIdx + 1) % allImages.length;
+      var p = allImages[currentIdx];
+      document.getElementById('lightbox-img').src = p.image_url;
+      document.getElementById('lightbox-title').textContent = (p.title_ar || '') + (p.title_en ? ' - ' + p.title_en : '');
+      document.getElementById('lightbox-desc').textContent = p.description_ar || '';
+    };
+
+    document.addEventListener('keydown', function(e) {
+      if (!document.getElementById('lightbox').classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') prevImage();
+        if (e.key === 'ArrowLeft') nextImage();
+      }
+    });
+
+    loadGallery();
+  </script>
+</body>
+</html>
