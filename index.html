@@ -11,13 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="scroll-progress"></div>
   <!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#e8e0d6]">
     <div class="w-full px-6 lg:px-10">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex flex-col items-start">
           <span class="font-arabic text-2xl font-bold text-[#8B5E3C] tracking-wide" data-i18n="nav-logo">الاتحاد التجارية</span>
-          <span class="text-sm text-[#6B6560] tracking-wide mt-1 font-semibold">Quality Beyond Borders. Excellence Without Limits.</span>
+          <span class="text-[10px] md:text-[11px] text-[#6B6560] tracking-wide mt-0.5 font-medium" data-i18n="nav-tagline">جودة تعبر الحدود.. وتميّز بلا حدود</span>
         </a>
         <div class="hidden md:flex items-center gap-10">
           <a href="index.html" class="nav-link active text-[#2D2A26] hover:text-[#8B5E3C] font-medium text-sm tracking-wide" data-i18n="nav-home">الرئيسية</a>
@@ -58,10 +59,12 @@
 
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center overflow-hidden">
-    <div class="absolute inset-0">
+    <div class="absolute inset-0 hero-zoom">
       <img src="images/hero-bg.png" alt="شركة الاتحاد التجارية" class="w-full h-full object-cover">
       <div class="absolute inset-0 bg-gradient-to-l from-black/70 via-black/50 to-black/60"></div>
     </div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
 
     <div class="max-w-7xl mx-auto px-6 pt-32 pb-20 relative z-10">
       <div class="max-w-4xl mx-auto text-center">
@@ -70,8 +73,8 @@
           <span data-i18n="hero-badge">شركة الاتحاد التجارية</span>
         </div>
 
-        <h1 class="font-arabic text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8 animate-fade-in-up animate-fade-in-up-delay-1" style="font-size: 1.5rem;" data-i18n="hero-title">
-          أهلًا وسهلًا بكم في <span class="text-[#C4956A]">شركة الاتحاد التجارية</span><br>للاستيراد والتصدير
+        <h1 class="font-arabic text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-8 animate-fade-in-up animate-fade-in-up-delay-1" data-i18n="hero-title">
+          أهلًا وسهلًا بكم في <span class="text-[#C4956A] hero-shimmer">شركة الاتحاد التجارية</span><br>للاستيراد والتصدير
         </h1>
 
         <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto mb-10 animate-fade-in-up animate-fade-in-up-delay-2" data-i18n="hero-desc">
@@ -118,7 +121,7 @@
       <div class="text-center mb-16">
         <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="products-section-label">منتجاتنا</span>
         <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6" data-i18n="products-section-title">منتجات الاتحاد التجارية</h2>
-        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+        <div class="section-ornament"><span></span></div>
       </div>
       <div id="home-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="col-span-full text-center py-12">
@@ -136,14 +139,14 @@
   </section>
 
   <!-- Build Your Brand Section -->
-  <section id="brand" class="py-28 bg-[#FAF6F1]">
+  <section id="brand" class="py-28 bg-[#FAF6F1] section-dots">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
         <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="brand-label">خدمات التصنيع للغير</span>
         <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6 leading-tight" data-i18n="brand-title">
           اصنع علامتك التجارية<br>معنا
         </h2>
-        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+        <div class="section-ornament"><span></span></div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -230,7 +233,7 @@
       <div class="text-center mb-20">
         <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="timeline-label">رحلة العميل</span>
         <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6" data-i18n="timeline-title">رحلة علامتك التجارية</h2>
-        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+        <div class="section-ornament"><span></span></div>
       </div>
 
       <div id="journey" class="relative max-w-4xl mx-auto">
@@ -249,10 +252,11 @@
         </svg>
 
         <div class="journey-item">
-          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+          <div class="journey-card">
+            <span class="journey-step">01</span>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
+              <div class="journey-icon">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
               </div>
               <div>
                 <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-1-title">الفكرة</h3>
@@ -263,10 +267,11 @@
         </div>
 
         <div class="journey-item">
-          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+          <div class="journey-card">
+            <span class="journey-step">02</span>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+              <div class="journey-icon">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
               </div>
               <div>
                 <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-2-title">دراسة المشروع</h3>
@@ -277,10 +282,11 @@
         </div>
 
         <div class="journey-item">
-          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+          <div class="journey-card">
+            <span class="journey-step">03</span>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+              <div class="journey-icon">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
               </div>
               <div>
                 <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-3-title">تطوير المنتج</h3>
@@ -291,10 +297,11 @@
         </div>
 
         <div class="journey-item">
-          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+          <div class="journey-card">
+            <span class="journey-step">04</span>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+              <div class="journey-icon">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
               </div>
               <div>
                 <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-4-title">التصنيع</h3>
@@ -305,10 +312,11 @@
         </div>
 
         <div class="journey-item">
-          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+          <div class="journey-card">
+            <span class="journey-step">05</span>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+              <div class="journey-icon">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
               </div>
               <div>
                 <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-5-title">التغليف</h3>
@@ -319,10 +327,11 @@
         </div>
 
         <div class="journey-item">
-          <div class="bg-[#FAF6F1] border border-[#e8e0d6] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+          <div class="journey-card">
+            <span class="journey-step">06</span>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-[#8B5E3C]/10 flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+              <div class="journey-icon">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
               </div>
               <div>
                 <h3 class="font-arabic text-lg font-bold text-[#2D2A26]" data-i18n="timeline-6-title">التسليم</h3>
@@ -333,9 +342,10 @@
         </div>
 
         <div class="journey-item">
-          <div class="bg-gradient-to-l from-[#8B5E3C] to-[#6B4423] border border-[#8B5E3C] rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+          <div class="journey-card journey-card-final">
+            <span class="journey-step journey-step-light">07</span>
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
+              <div class="journey-icon journey-icon-light">
                 <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.841m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
               </div>
               <div>
@@ -356,7 +366,7 @@
       <div class="text-center mb-20">
         <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="features-label">قيمنا</span>
         <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6" data-i18n="features-title">لماذا تختار الاتحاد؟</h2>
-        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+        <div class="section-ornament"><span></span></div>
       </div>
 
       <div id="features-grid" class="stagger-grid grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -396,7 +406,7 @@
   </section>
 
   <!-- Goal Section -->
-  <section class="py-28 bg-[#FAF6F1]">
+  <section class="py-28 bg-[#FAF6F1] section-dots">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div>
@@ -447,7 +457,7 @@
       <div class="text-center mb-20">
         <span class="text-[#8B5E3C] font-semibold text-sm tracking-widest uppercase" data-i18n="vision-label">رؤيتنا</span>
         <h2 class="font-arabic text-3xl md:text-4xl text-[#2D2A26] mt-4 mb-6" data-i18n="vision-title">طموحنا نحو القمة</h2>
-        <div class="w-16 h-0.5 bg-[#8B5E3C] mx-auto"></div>
+        <div class="section-ornament"><span></span></div>
       </div>
 
       <div class="stagger-grid grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -649,30 +659,53 @@
           card.classList.add('anim-done');
         });
       });
-      var gridObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            cards.forEach(function(card) { card.classList.add('anim-in'); });
-            gridObserver.disconnect();
-          }
-        });
-      }, { threshold: 0.2 });
+        var gridObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              cards.forEach(function(card) { card.classList.add('anim-in'); });
+              // safety net: if the entrance animation never runs (e.g. hidden
+              // tab or reduced motion), force the cards visible after a while
+              setTimeout(function() {
+                cards.forEach(function(card) { card.classList.add('anim-done'); });
+              }, 2500);
+              gridObserver.disconnect();
+            }
+          });
+        }, { threshold: window.matchMedia('(min-width: 768px)').matches ? 0.2 : 0.08 });
       gridObserver.observe(grid);
     });
 
-    // Customer journey: zigzag line drawn on scroll, cards revealed one by one
+    // Scroll progress bar
     (function() {
+      var bar = document.getElementById('scroll-progress');
+      if (!bar) return;
+      function updateBar() {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+        bar.style.width = pct + '%';
+      }
+      window.addEventListener('scroll', updateBar, { passive: true });
+      window.addEventListener('resize', updateBar);
+      updateBar();
+    })();
+
+    // Customer journey: gradient line eases along with scroll, dots light up, cards reveal
+    (function() {
+      var NS = 'http://www.w3.org/2000/svg';
       var journey = document.getElementById('journey');
       if (!journey) return;
       var svg = document.getElementById('journey-svg');
       var pathEl = document.getElementById('journey-path');
       var pathBg = document.getElementById('journey-path-bg');
+      var dotsG = document.getElementById('journey-dots');
+      var tip = document.getElementById('journey-tip');
       var items = Array.prototype.slice.call(journey.querySelectorAll('.journey-item'));
       var totalLen = 0, anchors = [], isDesktop = false;
+      var current = 0, target = 0, animating = false;
 
       function buildPath() {
         isDesktop = window.matchMedia('(min-width: 768px)').matches;
-        if (!isDesktop) { update(); return; }
+        if (!isDesktop) { updateTarget(); return; }
         var w = journey.offsetWidth, h = journey.offsetHeight;
         svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
         // offsetLeft/offsetTop ignore the reveal transform, so the path stays accurate
@@ -685,7 +718,7 @@
         });
         var d = 'M ' + pts[0].x + ' ' + pts[0].bottom;
         anchors = [0];
-        var tmp = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        var tmp = document.createElementNS(NS, 'path');
         for (var i = 1; i < pts.length; i++) {
           var prev = pts[i - 1], cur = pts[i];
           var midY = (prev.bottom + cur.top) / 2;
@@ -697,23 +730,70 @@
         pathBg.setAttribute('d', d);
         totalLen = pathEl.getTotalLength();
         pathEl.style.strokeDasharray = totalLen;
-        pathEl.style.strokeDashoffset = totalLen;
-        update();
+        pathEl.style.strokeDashoffset = totalLen - current;
+
+        dotsG.innerHTML = '';
+        anchors.forEach(function(len) {
+          var pt = pathEl.getPointAtLength(len);
+          var c = document.createElementNS(NS, 'circle');
+          c.setAttribute('cx', pt.x);
+          c.setAttribute('cy', pt.y);
+          c.setAttribute('r', 5);
+          c.setAttribute('class', 'journey-anchor');
+          dotsG.appendChild(c);
+        });
+        updateTarget();
       }
 
-      function update() {
+      function render() {
+        pathEl.style.strokeDashoffset = totalLen - current;
+        if (current > 2 && current < totalLen - 2) {
+          var p = pathEl.getPointAtLength(current);
+          tip.setAttribute('cx', p.x);
+          tip.setAttribute('cy', p.y);
+          tip.setAttribute('opacity', '1');
+        } else {
+          tip.setAttribute('opacity', '0');
+        }
+        var dots = dotsG.children;
+        for (var i = 0; i < items.length; i++) {
+          if (target > 0 && current >= anchors[i] - 0.5) {
+            items[i].classList.add('revealed');
+            if (dots[i]) dots[i].classList.add('lit');
+          }
+        }
+      }
+
+      // the line eases toward the scroll position instead of jumping, so the
+      // drawing feels slow and smooth even on fast scrolls
+      function tick() {
+        var diff = target - current;
+        if (Math.abs(diff) < 0.5) {
+          current = target;
+          render();
+          animating = false;
+          return;
+        }
+        current += diff * 0.05;
+        render();
+        requestAnimationFrame(tick);
+      }
+
+      function startAnim() {
+        if (!animating) {
+          animating = true;
+          requestAnimationFrame(tick);
+        }
+      }
+
+      function updateTarget() {
         var rect = journey.getBoundingClientRect();
         var vh = window.innerHeight;
         var progress = (vh * 0.8 - rect.top) / rect.height;
         progress = Math.max(0, Math.min(1, progress));
         if (isDesktop && totalLen) {
-          var drawn = totalLen * progress;
-          pathEl.style.strokeDashoffset = totalLen - drawn;
-          if (progress > 0) {
-            items.forEach(function(item, i) {
-              if (drawn >= anchors[i]) item.classList.add('revealed');
-            });
-          }
+          target = totalLen * progress;
+          startAnim();
         } else {
           items.forEach(function(item) {
             if (item.getBoundingClientRect().top < vh * 0.88) item.classList.add('revealed');
@@ -725,7 +805,7 @@
       window.addEventListener('scroll', function() {
         if (ticking) return;
         ticking = true;
-        requestAnimationFrame(function() { update(); ticking = false; });
+        requestAnimationFrame(function() { updateTarget(); ticking = false; });
       }, { passive: true });
       window.addEventListener('resize', buildPath);
       window.addEventListener('load', buildPath);

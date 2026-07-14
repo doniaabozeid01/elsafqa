@@ -1,6 +1,7 @@
 const translations = {
   ar: {
     "nav-logo": "الاتحاد التجارية",
+    "nav-tagline": "جودة تعبر الحدود.. وتميّز بلا حدود",
     "nav-home": "الرئيسية",
     "nav-about": "من نحن",
     "nav-gallery": "المعرض",
@@ -11,7 +12,7 @@ const translations = {
     "nav-signin": "تسجيل الدخول",
 
     "hero-badge": "شركة الاتحاد التجارية",
-    "hero-title": "أهلًا وسهلًا بكم في <span class='text-[#C4956A]'>شركة الاتحاد التجارية</span><br>للاستيراد والتصدير",
+    "hero-title": "أهلًا وسهلًا بكم في <span class='text-[#C4956A] hero-shimmer'>شركة الاتحاد التجارية</span><br>للاستيراد والتصدير",
     "hero-desc": "إحدى الشركات الرائدة في تصدير المواد الغذائية ومنتجات التجميل إلى أسواق الشرق الأوسط وما حولها إقليمياً وعالمياً",
     "hero-cta1": "اعرف المزيد",
     "hero-cta2": "تواصل معنا",
@@ -152,6 +153,7 @@ const translations = {
 
   en: {
     "nav-logo": "Al-Ittihad Trading",
+    "nav-tagline": "Quality Beyond Borders. Excellence Without Limits.",
     "nav-home": "Home",
     "nav-about": "About Us",
     "nav-gallery": "Gallery",
@@ -162,7 +164,7 @@ const translations = {
     "nav-signin": "Sign In",
 
     "hero-badge": "Al-Ittihad Trading Company",
-    "hero-title": "Welcome to <span class='text-[#C4956A]'>Al-Ittihad Trading</span><br>Company for Import & Export",
+    "hero-title": "Welcome to <span class='text-[#C4956A] hero-shimmer'>Al-Ittihad Trading</span><br>Company for Import & Export",
     "hero-desc": "A leading company in exporting food products and cosmetics to Middle East markets and beyond, regionally and globally",
     "hero-cta1": "Learn More",
     "hero-cta2": "Contact Us",
