@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /pages/login.html
+Disallow: /pages/dashboard.html
+
+Sitemap: https://al-ittihad-trading.com/sitemap.xml
