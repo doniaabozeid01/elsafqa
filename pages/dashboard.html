@@ -24,7 +24,7 @@
   <div id="app" class="flex min-h-screen">
 
     <!-- Sidebar -->
-    <aside id="sidebar" class="w-64 bg-white border-l border-gray-200 flex flex-col fixed h-full z-30 transition-transform duration-300">
+    <aside id="sidebar" class="w-64 bg-white border-l border-gray-200 flex flex-col fixed top-0 right-0 h-full z-40 transition-transform duration-300 translate-x-full lg:translate-x-0">
       <div class="p-6 border-b border-gray-100">
         <h1 class="text-lg font-bold text-[#2D2A26]">الاتحاد التجارية</h1>
         <p class="text-xs text-[#6B6560] mt-1">لوحة التحكم</p>
@@ -53,7 +53,7 @@
         </button>
       </nav>
       <div class="p-4 border-t border-gray-100">
-        <div class="flex items-center gap-3 mb-3">
+        <div class="flex items-center gap-3">
           <div class="w-9 h-9 rounded-full bg-[#8B5E3C]/10 flex items-center justify-center">
             <svg class="w-5 h-5 text-[#8B5E3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
           </div>
@@ -62,26 +62,42 @@
             <p class="text-[10px] text-[#6B6560]">مدير</p>
           </div>
         </div>
-        <button onclick="logout()" class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-xs font-medium text-red-600 hover:bg-red-50 transition-colors">
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"/></svg>
-          تسجيل الخروج
-        </button>
       </div>
     </aside>
 
-    <!-- Mobile Sidebar Toggle -->
-    <button onclick="toggleSidebar()" class="lg:hidden fixed top-4 right-4 z-40 bg-white p-2 rounded-xl shadow-lg border border-gray-200">
-      <svg class="w-6 h-6 text-[#2D2A26]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
-    </button>
+    <!-- Mobile Sidebar Backdrop -->
+    <div id="sidebar-backdrop" onclick="toggleSidebar()" class="hidden lg:hidden fixed inset-0 bg-black/40 z-30"></div>
 
     <!-- Main Content -->
-    <main class="flex-1 lg:mr-64 p-6 lg:p-8">
-      <div id="content-area" class="max-w-6xl mx-auto"></div>
+    <main class="flex-1 lg:mr-64 flex flex-col min-h-screen">
+      <!-- Top Navbar -->
+      <header class="sticky top-0 z-20 h-16 bg-white/95 backdrop-blur-sm border-b border-gray-200 px-4 lg:px-8 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <button onclick="toggleSidebar()" class="lg:hidden p-2 rounded-xl border border-gray-200 text-[#2D2A26] hover:bg-gray-50 transition-colors" aria-label="القائمة">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+          </button>
+          <div>
+            <h1 class="text-sm lg:text-base font-bold text-[#2D2A26] leading-tight">الاتحاد التجارية</h1>
+            <p class="text-[10px] text-[#6B6560]">لوحة التحكم</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span id="navbar-email" class="hidden sm:block text-xs text-[#6B6560]" dir="ltr"></span>
+          <button onclick="logout()" class="flex items-center gap-2 px-3 lg:px-4 py-2 rounded-xl text-xs font-medium text-red-600 border border-red-100 hover:bg-red-50 transition-colors">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"/></svg>
+            <span class="hidden sm:inline">تسجيل الخروج</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="p-6 lg:p-8">
+        <div id="content-area" class="max-w-6xl mx-auto"></div>
+      </div>
     </main>
   </div>
 
   <!-- Modal -->
-  <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay">
+  <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay" onclick="if (event.target === this) closeModal()">
     <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg mx-4 max-h-[90vh] overflow-y-auto">
       <div class="p-6 border-b border-gray-100 flex items-center justify-between">
         <h3 id="modal-title" class="text-lg font-bold text-[#2D2A26]"></h3>
@@ -93,6 +109,24 @@
     </div>
   </div>
 
+  <!-- Confirm Dialog -->
+  <div id="confirm-modal" class="fixed inset-0 z-[60] hidden items-center justify-center modal-overlay">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-sm mx-4 p-6 text-center fade-in">
+      <div class="w-14 h-14 rounded-full bg-red-50 flex items-center justify-center mx-auto mb-4">
+        <svg class="w-7 h-7 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L5.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"/></svg>
+      </div>
+      <h3 id="confirm-title" class="text-lg font-bold text-[#2D2A26] mb-2"></h3>
+      <p id="confirm-text" class="text-sm text-[#6B6560] mb-6 leading-relaxed"></p>
+      <div class="flex gap-3">
+        <button id="confirm-cancel" class="flex-1 py-2.5 rounded-xl bg-gray-100 text-[#2D2A26] text-sm font-medium hover:bg-gray-200 transition-colors">إلغاء</button>
+        <button id="confirm-ok" class="flex-1 py-2.5 rounded-xl bg-red-600 text-white text-sm font-medium hover:bg-red-700 transition-colors"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 right-6 z-[70] hidden max-w-xs px-4 py-3 rounded-xl shadow-lg text-sm text-white fade-in"></div>
+
   <script type="module">
     import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 
@@ -103,19 +137,33 @@
     // Auth check
     const { data: { session } } = await supabase.auth.getSession()
     if (!session) { window.location.href = 'login.html'; }
-    else { document.getElementById('user-email').textContent = session.user.email; }
+    else {
+      document.getElementById('user-email').textContent = session.user.email;
+      document.getElementById('navbar-email').textContent = session.user.email;
+    }
 
     window.supabase = supabase
     window.currentSection = 'overview'
     window.logout = async () => { await supabase.auth.signOut(); window.location.href = 'login.html'; }
-    window.toggleSidebar = () => { document.getElementById('sidebar').classList.toggle('-translate-x-full'); }
+    const sidebar = document.getElementById('sidebar')
+    const backdrop = document.getElementById('sidebar-backdrop')
+
+    window.toggleSidebar = () => {
+      sidebar.classList.toggle('translate-x-full')
+      backdrop.classList.toggle('hidden')
+    }
+
+    function closeMobileSidebar() {
+      sidebar.classList.add('translate-x-full')
+      backdrop.classList.add('hidden')
+    }
 
     // Navigation
     window.navigate = async (section) => {
       window.currentSection = section
       document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'))
       document.querySelector(`[data-section="${section}"]`).classList.add('active')
-      document.getElementById('sidebar').classList.add('-translate-x-full')
+      closeMobileSidebar()
       await renderSection(section)
     }
 
@@ -318,7 +366,7 @@
     }
 
     window.deleteMessage = async (id) => {
-      if (!confirm('هل أنت متأكد من حذف هذه الرسالة؟')) return
+      if (!(await showConfirm({ title: 'حذف الرسالة', text: 'هل أنت متأكد من حذف هذه الرسالة؟ لا يمكن التراجع عن هذا الإجراء.' }))) return
       await supabase.from('messages').delete().eq('id', id)
       closeModal()
       if (window.currentSection === 'messages') await renderMessages(document.getElementById('content-area'))
@@ -328,6 +376,54 @@
     window.closeModal = () => {
       document.getElementById('modal').classList.add('hidden')
       document.getElementById('modal').classList.remove('flex')
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return
+      // the confirm dialog handles its own Escape; don't close the modal underneath it
+      if (!document.getElementById('confirm-modal').classList.contains('hidden')) return
+      if (!document.getElementById('modal').classList.contains('hidden')) closeModal()
+    })
+
+    // Pretty confirm dialog (replaces window.confirm)
+    window.showConfirm = ({ title = 'تأكيد الحذف', text = '', confirmLabel = 'حذف' } = {}) => new Promise((resolve) => {
+      const m = document.getElementById('confirm-modal')
+      const okBtn = document.getElementById('confirm-ok')
+      const cancelBtn = document.getElementById('confirm-cancel')
+      document.getElementById('confirm-title').textContent = title
+      document.getElementById('confirm-text').textContent = text
+      okBtn.textContent = confirmLabel
+      m.classList.remove('hidden')
+      m.classList.add('flex')
+
+      const close = (result) => {
+        m.classList.add('hidden')
+        m.classList.remove('flex')
+        okBtn.removeEventListener('click', onOk)
+        cancelBtn.removeEventListener('click', onCancel)
+        m.removeEventListener('click', onOverlay)
+        document.removeEventListener('keydown', onKey)
+        resolve(result)
+      }
+      const onOk = () => close(true)
+      const onCancel = () => close(false)
+      const onOverlay = (e) => { if (e.target === m) close(false) }
+      const onKey = (e) => { if (e.key === 'Escape') close(false) }
+
+      okBtn.addEventListener('click', onOk)
+      cancelBtn.addEventListener('click', onCancel)
+      m.addEventListener('click', onOverlay)
+      document.addEventListener('keydown', onKey)
+    })
+
+    // Toast notification (replaces window.alert)
+    let toastTimer = null
+    window.showToast = (msg, type = 'error') => {
+      const t = document.getElementById('toast')
+      t.textContent = msg
+      t.className = 'fixed bottom-6 right-6 z-[70] max-w-xs px-4 py-3 rounded-xl shadow-lg text-sm text-white fade-in ' + (type === 'success' ? 'bg-green-600' : 'bg-red-600')
+      clearTimeout(toastTimer)
+      toastTimer = setTimeout(() => t.classList.add('hidden'), 3500)
     }
 
     // PRODUCTS
@@ -432,7 +528,7 @@
       fileInput.addEventListener('change', (e) => {
         selectedFile = e.target.files[0]
         if (!selectedFile) return
-        if (selectedFile.size > 5 * 1024 * 1024) { alert('الصورة كبيرة جداً. الحد الأقصى 5MB'); return }
+        if (selectedFile.size > 5 * 1024 * 1024) { showToast('الصورة كبيرة جداً. الحد الأقصى 5MB'); return }
         const reader = new FileReader()
         reader.onload = (ev) => {
           previewImg.src = ev.target.result
@@ -465,7 +561,7 @@
           const fileName = `products/${Date.now()}-${Math.random().toString(36).substr(2,9)}.${ext}`
           const { error: uploadError } = await supabase.storage.from('product-images').upload(fileName, selectedFile)
           if (uploadError) {
-            alert('خطأ في رفع الصورة: ' + uploadError.message)
+            showToast('خطأ في رفع الصورة: ' + uploadError.message)
             btn.disabled = false
             btn.textContent = isEdit ? 'حفظ التعديلات' : 'إضافة المنتج'
             return
@@ -497,7 +593,7 @@
     window.editProduct = (product) => { showProductForm(product) }
 
     window.deleteProduct = async (id) => {
-      if (!confirm('هل أنت متأكد من حذف هذا المنتج؟')) return
+      if (!(await showConfirm({ title: 'حذف المنتج', text: 'هل أنت متأكد من حذف هذا المنتج؟ لا يمكن التراجع عن هذا الإجراء.' }))) return
       await supabase.from('products').delete().eq('id', id)
       await renderProducts(document.getElementById('content-area'))
     }
@@ -604,7 +700,7 @@
       fileInput.addEventListener('change', (e) => {
         selectedFile = e.target.files[0]
         if (!selectedFile) return
-        if (selectedFile.size > 5 * 1024 * 1024) { alert('الصورة كبيرة جداً. الحد الأقصى 5MB'); return }
+        if (selectedFile.size > 5 * 1024 * 1024) { showToast('الصورة كبيرة جداً. الحد الأقصى 5MB'); return }
         const reader = new FileReader()
         reader.onload = (ev) => {
           previewImg.src = ev.target.result
@@ -637,7 +733,7 @@
           const fileName = `gallery/${Date.now()}-${Math.random().toString(36).substr(2,9)}.${ext}`
           const { error: uploadError } = await supabase.storage.from('product-images').upload(fileName, selectedFile)
           if (uploadError) {
-            alert('خطأ في رفع الصورة: ' + uploadError.message)
+            showToast('خطأ في رفع الصورة: ' + uploadError.message)
             btn.disabled = false
             btn.textContent = isEdit ? 'حفظ التعديلات' : 'إضافة الصورة'
             return
@@ -646,7 +742,7 @@
           imageUrl = urlData.publicUrl
         }
 
-        if (!imageUrl) { alert('يجب اختيار صورة'); btn.disabled = false; btn.textContent = isEdit ? 'حفظ التعديلات' : 'إضافة الصورة'; return }
+        if (!imageUrl) { showToast('يجب اختيار صورة'); btn.disabled = false; btn.textContent = isEdit ? 'حفظ التعديلات' : 'إضافة الصورة'; return }
 
         const data = {
           title_ar: document.getElementById('g-title-ar').value,
@@ -670,7 +766,7 @@
     window.editGalleryImage = (image) => { showGalleryForm(image) }
 
     window.deleteGalleryImage = async (id) => {
-      if (!confirm('هل أنت متأكد من حذف هذه الصورة؟')) return
+      if (!(await showConfirm({ title: 'حذف الصورة', text: 'هل أنت متأكد من حذف هذه الصورة؟ لا يمكن التراجع عن هذا الإجراء.' }))) return
       await supabase.from('gallery_images').delete().eq('id', id)
       await renderGallery(document.getElementById('content-area'))
     }
